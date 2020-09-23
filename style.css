@@ -1,6 +1,60 @@
 * {
   box-sizing: border-box;
+  color: ivory;
   font-family: "american typewriter", calibri;
+}
+
+body {
+  background: black;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  height: 0;
+  width: 75vw;
+  min-width: 450px;
+}
+
+p {
+	margin:auto;
+}
+
+img{
+	width: 100%;
+}
+
+.img {
+  height: 100%;
+}
+
+img.rounded {
+  border-radius: 15%;
+}
+
+.bgstagger {
+	background-color: rgb(50,50,50);
+  border-radius: 15%;
+	padding: 20px 10px 30px 10px;
+  margin: 20px;
+}
+
+/*
+	link stuffs
+*/
+
+a {
+	color:lightblue;
+}
+
+a:visited {
+	color:red;
+}
+
+a:hover {
+	color:green;
+}
+
+a:active {
+	color:purple;
 }
 
 /* Mobile First Flexbox stuffs */
@@ -19,9 +73,42 @@
   margin: 10px;
 }
 
-/* Desktop Version */
-@media all and (max-width: 600px) {
+/* Desktop Version Flexbox stuffs */
+@media all and (min-width: 800px) {
   .group {
     flex-direction: row;
   }
+}
+
+/* 
+	Everything below this makes the blinking cursor work
+*/
+
+h1.blink {
+	position: relative;
+	display: inline-block;
+}
+
+h1.blink::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  display: inline-block;
+  background-color: #606060;
+  width: 2px;
+  height: 1em;
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
 }
