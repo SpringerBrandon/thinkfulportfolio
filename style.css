@@ -74,14 +74,14 @@ a:active {
 }
 
 /* Desktop Version Flexbox stuffs */
-@media all and (min-width: 800px) {
+@media all and (min-width: 920px) {
   .group {
     flex-direction: row;
   }
 }
 
 /* 
-	Everything below this makes the blinking cursor work
+	Make the blinking cursor work
 */
 
 h1.blink {
@@ -111,4 +111,80 @@ h1.blink::after {
   0% { opacity: 1.0; }
   50% { opacity: 0.0; }
   100% { opacity: 1.0; }
+}
+
+/* Contact Form Design */
+
+form {
+  padding-right: 8px;
+  /* Fixed small sizing issue on the right */
+}
+
+form label {
+  display: block;
+  padding: 1px;
+}
+
+form input, 
+form textarea {
+  width: 100%;
+  max-width: 750px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+form textarea {
+  height: 160px;
+}
+
+/* ---  Navigation --- */
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: ivory;
+  text-decoration: none;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li a:visited {
+  color: ivory;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+}
+
+@media all and (min-width: 920px) {
+  .group {
+    flex-direction: row;
+  }
+
+  header .group {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  header h1 {
+    min-width: 371px;
+  }
+
+  header nav {
+    margin-top: 2.5em;
+  }
 }
