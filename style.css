@@ -73,13 +73,6 @@ a:active {
   margin: 10px;
 }
 
-/* Desktop Version Flexbox stuffs */
-@media all and (min-width: 920px) {
-  .group {
-    flex-direction: row;
-  }
-}
-
 /* 
 	Make the blinking cursor work
 */
@@ -169,6 +162,7 @@ header nav ul li a:hover {
   color: #bdbdbd;
 }
 
+/* Desktop Version Flexbox stuffs */
 @media all and (min-width: 920px) {
   .group {
     flex-direction: row;
