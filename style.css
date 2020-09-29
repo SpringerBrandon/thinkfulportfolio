@@ -162,8 +162,12 @@ header nav ul li a:hover {
   color: #bdbdbd;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /* Desktop Version Flexbox stuffs */
-@media all and (min-width: 920px) {
+@media all and (min-width: 1039px) {
   .group {
     flex-direction: row;
   }
@@ -172,10 +176,6 @@ header nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-content: center;
-  }
-
-  header h1 {
-    min-width: 371px;
   }
 
   header nav {
